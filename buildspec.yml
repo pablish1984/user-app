@@ -20,3 +20,7 @@ phases:
       - echo Pushing the Docker image
       - echo Updated build stage
       - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - printf '[{"name":"user-app-latest", "imageUri":"public.ecr.aws/k8t7n6p8/my-python-app:user-app-latest"}]' > imagedefinitions.json      
+artifacts:
+  files:
+    - imagedefinitions.json
