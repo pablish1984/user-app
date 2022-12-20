@@ -1,0 +1,25 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      gateway:
+        description: 'gateway to boostrap'
+        required: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  bootstrap:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Runs a single command using the runners shell
+    - name: Create files
+      run: |
+        echo ${{ secrets.TRACKCENTRAL }} > ~/.ssh/trackcentral.pem
+        echo ${{ secrets.IDU_GWMGMT }} > ~/.ssh/idu_gwmgmt
