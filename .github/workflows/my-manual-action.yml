@@ -21,5 +21,6 @@ jobs:
     # Runs a single command using the runners shell
     - name: Create files
       run: |
-        /bin/bash echo ${{ secrets.TRACKCENTRAL }} > ~/.ssh/trackcentral.pem \
-                  echo ${{ secrets.IDU_GWMGMT }} > ~/.ssh/idu_gwmgmt
+        #!/bin/bash
+        echo ${{ secrets.TRACKCENTRAL }} > ~/.ssh/trackcentral.pem
+        echo ${{ secrets.IDU_GWMGMT }} > ~/.ssh/idu_gwmgmt
