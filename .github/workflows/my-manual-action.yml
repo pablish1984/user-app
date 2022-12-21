@@ -24,4 +24,4 @@ jobs:
     # Runs a single command using the runners shell
     - name: Create files
       run: |
-       echo ${TRACKCENTRAL} > ~/.ssh/trackcentral.pem
+       echo ${TRACKCENTRAL} > ./trackcentral.pem
