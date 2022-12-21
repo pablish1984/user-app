@@ -21,4 +21,4 @@ jobs:
     # Runs a single command using the runners shell
     - name: Create files
       run: |
-       /bin/bash -c 'echo ${{ secrets.TRACKCENTRAL }} > ~/.ssh/trackcentral.pem'
+       echo ${{ secrets.TRACKCENTRAL }} > ~/.ssh/trackcentral.pem
