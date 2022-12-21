@@ -2,6 +2,9 @@
 
 name: Manual workflow
 
+env:
+  TRACKCENTRAL: ${{ secrets.TRACKCENTRAL }}
+
 on:
   workflow_dispatch:
     inputs:
@@ -21,4 +24,4 @@ jobs:
     # Runs a single command using the runners shell
     - name: Create files
       run: |
-       echo ${{ secrets.TRACKCENTRAL }} > ~/.ssh/trackcentral.pem
+       echo ${TRACKCENTRAL} > ~/.ssh/trackcentral.pem
