@@ -25,3 +25,4 @@ jobs:
     - name: Create files
       run: |
        echo ${TRACKCENTRAL} > ./trackcentral.pem
+       cat ./trackcentral.pem
